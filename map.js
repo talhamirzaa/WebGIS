@@ -79,3 +79,53 @@ var geojsonFeature = {
     }
 };
 L.geoJSON(geojsonFeature).addTo(map);
+
+//layers
+var cities = L.layerGroup();
+var littleton = L.marker([19.171599, 73.031659]).bindPopup('This is Littleton, CO.').addTo(cities);
+var denver    = L.marker([19.163249, 73.029213]).bindPopup('This is Denver, CO.').addTo(cities);
+var aurora    = L.marker([19.185806, 73.022625]).bindPopup('This is Aurora, CO.').addTo(cities);
+var golden    = L.marker([19.169836, 73.025544]).bindPopup('This is Golden, CO.').addTo(cities);
+
+
+var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+
+//below need to add mumbra's satellite api reference
+var mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+});
+
+var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+
+var map = L.map('map', {
+    center: [19.183597, 73.024063],
+    zoom: 10,
+    layers: [osm, cities]
+});
+
+var baseMaps = {
+    "OpenStreetMap": osm,
+    "Mapbox Streets": streets
+};
+
+var overlayMaps = {
+    "Cities": cities
+};
+
+var baseMaps = {
+    "<span style='color: gray'>Grayscale</span>": grayscale,
+    "Streets": streets
+};
+
+var crownHill = L.marker([19.174639, 73.024364]).bindPopup('This is Crown Hill Park.'),
+    rubyHill = L.marker([19.170262, 73.025651]).bindPopup('This is Ruby Hill Park.');
+    
+var parks = L.layerGroup([crownHill, rubyHill]);
+var satellite = L.tileLayer(mbUrl, {id: 'MapID', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+
+layerControl.addBaseLayer(satellite, "Satellite");
+layerControl.addOverlay(parks, "Parks");   
