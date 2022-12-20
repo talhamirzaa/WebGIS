@@ -1,0 +1,16 @@
+#show_files{
+    width: 40vh;
+
+   
+  }
+  
+#sh_fls{
+   
+      color: rgb(237, 237, 237);
+      margin-left: 15%;
+ 
+  }
+
+.dotted {
+    border-bottom: 2px dashed #bbb;
+  } 

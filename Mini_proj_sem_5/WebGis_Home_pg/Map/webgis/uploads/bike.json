@@ -1,0 +1,17 @@
+[
+  
+    {  
+      "type": "Point",
+      "coordinate": [ 93.788490, 6.852571 ],  
+      "Indirizzo": "Bike Sharing P.za Duomo Milano"
+    },
+    {
+      "type": "Point",
+      "coordinate": [ 93.789047, 6.852571 ],
+      "Indirizzo": "Bike Sharing P.za S.Babila Milano"
+    },
+    {
+      "type": "Point",
+      "coordinate": [ 93.789047, 6.852291 ],
+      "Indirizzo": "Bike Sharing P.za Cadorna Milano"
+    } ]

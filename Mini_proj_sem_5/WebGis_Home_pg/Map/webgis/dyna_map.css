@@ -1,0 +1,128 @@
+body { 
+     margin:0; padding:0;
+     font-family: "Open Sans", sans-serif;
+ }
+#map { 
+     position: absolute; 
+     top: 3.8rem; 
+     bottom:0; 
+     right:0;
+     left:25%; 
+}
+
+#hey{
+  color: rgb(0, 225, 214);
+  margin-left: 1rem;
+  
+}
+
+ /* Parellal container section */
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 6px;
+    border-color: #fff;
+    border-style: dotted;
+    /* height: 300px; Should be removed. Only for demonstration */
+  }
+  
+  .left {   
+     width: 75%;
+  }
+  
+  .right {
+    text-align: center;
+    padding-top: 15%;
+    width: 25%;
+    height: 90vh;
+  }
+  
+/* Clear floats after the columns 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
+
+#sidebar{
+  margin-left: 1rem;
+}
+
+
+
+.btn-file {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 2%;
+    float: left;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;   
+    cursor: inherit;
+    display: block;
+}
+#upld{
+    position: relative;
+    margin-top: 15%;
+    margin-left: 1%;
+    float: left;
+}
+
+/*feature css*/
+.distance{
+  height: 50px;
+  width: auto;
+  margin-top: -1.5%;
+  margin-left: 1%;
+ 
+}
+
+#buf{
+  color: white;
+  font-size: 15px;
+  margin-top: 1%;
+}
+.distance input{
+  width: 8rem;
+}
+
+.print-map{
+  color: #fff;
+  background: teal;
+  margin-top: 1%;
+  font-size: 16px;
+  
+  /*-width: 8rem;*/
+ }
+
+ #add_buf{
+  margin-top: 1%;
+  background-color: red;
+  color: white;
+ }
+
+#show_files{
+  width: 40vh;
+  margin-left: 1%;
+}
+
+#sh_fls{
+    color: rgb(237, 237, 237);
+    margin-top: 5%;
+    margin-left: 1%;
+    font-size: 22px;
+}
+
+.dotted {
+  border-bottom: 2px dashed #bbb;
+} 
